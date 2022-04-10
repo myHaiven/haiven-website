@@ -6,12 +6,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     alias: {
       react: path.join(__dirname, "node_modules", "react"),
     },
+    extensions: [".jsx", ".js", "tsx"],
   },
   module: {
     rules: [
@@ -58,6 +60,9 @@ module.exports = {
         type: "javascript/auto",
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebPackPlugin({

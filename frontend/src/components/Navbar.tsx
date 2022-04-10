@@ -2,13 +2,12 @@ import {
   Box,
   Flex,
   Center,
-  Text,
   IconButton,
   Button,
+  Link,
   Image,
   Stack,
   Collapse,
-  Link,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
@@ -16,11 +15,11 @@ import {
 import React from "react";
 import colors from "../styles/colors";
 import Logo from '../assets/logo.png';
-
 import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons';
+import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Navbaor() {
   const { isOpen, onToggle } = useDisclosure();
@@ -51,15 +50,14 @@ export default function Navbaor() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start', aligh:'center' }} >
+            <Flex align="center" px={useBreakpointValue({ base: 'center', md: 'left' })}>
             <Image
-              margin='auto'
               minH={'60px'}
               maxH={'80px'}
-              width='auto'
               src={Logo}
               alt="logo"
             />
-           
+            </Flex>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -108,9 +106,10 @@ const DesktopNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
               <Link
+                as={ReactRouterLink}
                 p={2}
                 _focus={{ boxShadow: "none", }}
-                href={navItem.href ?? '#'}
+                to={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={colors.primary}
@@ -127,14 +126,14 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
   return (
-    <Box py={{ base: 2 }} px={{ base: 4 }}>
     <Stack direction={'column'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
               <Link
+                as={ReactRouterLink}
                 p={2}
                 _focus={{ boxShadow: "none", }}
-                href={navItem.href ?? '#'}
+                to={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={colors.primary}
@@ -146,7 +145,6 @@ const MobileNav = () => {
         </Center>
       ))}
     </Stack>
-    </Box>
   );
 };
 
@@ -159,26 +157,26 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Home',
-    href: '#',
+    href: '/home',
   },
   {
     label: 'About Us',
-    href: '#',
+    href: '/about'
   },
   {
     label: 'Our Team',
-    href: '#',
+    href: '/team'
   },
   {
     label: 'Our Partners',
-    href: '#',
+    href: '/partners'
   },
   {
     label: 'Apps',
-    href: '#',
+    href: '/apps'
   },
   {
     label: 'Contact',
-    href: '#',
+    href: '/contact'
   },
 ];
