@@ -51,14 +51,14 @@ export default function Navbaor() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start', aligh:'center' }} >
-            <Flex align="center" px={useBreakpointValue({ base: 'center', md: 'left' })}>
+    
             <Image
               minH={'60px'}
               maxH={'80px'}
               src={Logo}
               alt="logo"
             />
-            </Flex>
+
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
