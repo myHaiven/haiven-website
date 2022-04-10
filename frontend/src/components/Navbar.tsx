@@ -3,6 +3,7 @@ import {
   Flex,
   Center,
   IconButton,
+  Text,
   Button,
   Link,
   Image,
@@ -98,36 +99,31 @@ export default function Navbaor() {
   );
 }
 
-
 const DesktopNav = () => {
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Center key={navItem.label}>
-              <Link
-                as={ReactRouterLink}
-                p={2}
-                _focus={{ boxShadow: "none", }}
-                to={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={colors.primary}
-                _hover={{
-                    color:colors.secondary,
-                }}>
-                {navItem.label}
-              </Link>
-        </Center>
-      ))}
+      <NavList/>
     </Stack>
   );
 };
 
 const MobileNav = () => {
   return (
-    <Stack direction={'column'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+    <Stack
+      bg={useColorModeValue('white', 'gray.800')}
+      p={4}
+      display={{ md: 'none' }}
+      direction={'column'}>
+        <NavList/>
+    </Stack>
+  );
+};
+
+const NavList = () => {
+  return (
+    <>
+    {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
               <Link
                 as={ReactRouterLink}
@@ -144,9 +140,9 @@ const MobileNav = () => {
               </Link>
         </Center>
       ))}
-    </Stack>
-  );
-};
+      </>
+  )
+}
 
 
 interface NavItem {
