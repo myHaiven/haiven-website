@@ -12,14 +12,11 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import React from "react";
 import colors from "../styles/colors";
-import Logo from '../assets/logo.png';
-import {
-  HamburgerIcon,
-  CloseIcon,
-} from '@chakra-ui/icons';
+import Logo from "../assets/logo.png";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Navbaor() {
@@ -28,65 +25,67 @@ export default function Navbaor() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
+        bg={useColorModeValue("white", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
+      >
         <Flex
-          flex={{ base: 1, md: 'auto' }}
+          flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: "flex", md: "none" }}
+        >
           <IconButton
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
+            variant={"ghost"}
+            aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start', aligh:'center' }} >
-    
-            <Image
-              minH={'60px'}
-              maxH={'80px'}
-              src={Logo}
-              alt="logo"
-            />
+        <Flex
+          flex={{ base: 1 }}
+          justify={{ base: "center", md: "start", aligh: "center" }}
+        >
+          <Image minH={"60px"} maxH={"80px"} src={Logo} alt="logo" />
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Stack
           flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
+          justify={"flex-end"}
+          direction={"row"}
+          spacing={6}
+        >
           <Button
-            as={'a'}
-            _focus={{ boxShadow: "none", }}
-            fontSize={'sm'}
+            as={"a"}
+            _focus={{ boxShadow: "none" }}
+            fontSize={"sm"}
             fontWeight={400}
-            variant={'link'}
-            href={'#'}>
+            variant={"link"}
+            href={"#"}
+          >
             Sign In
           </Button>
           <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
+            display={{ base: "none", md: "inline-flex" }}
+            fontSize={"sm"}
             fontWeight={600}
-            color={'white'}
+            color={"white"}
             bg={colors.primary}
             _hover={{
               bg: colors.secondary,
-            }}>
+            }}
+          >
             Sign Up
           </Button>
         </Stack>
@@ -100,10 +99,9 @@ export default function Navbaor() {
 }
 
 const DesktopNav = () => {
-
   return (
-    <Stack direction={'row'} spacing={4}>
-      <NavList/>
+    <Stack direction={"row"} spacing={4}>
+      <NavList />
     </Stack>
   );
 };
@@ -111,11 +109,12 @@ const DesktopNav = () => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={useColorModeValue("white", "gray.800")}
       p={4}
-      display={{ md: 'none' }}
-      direction={'column'}>
-        <NavList/>
+      display={{ md: "none" }}
+      direction={"column"}
+    >
+      <NavList />
     </Stack>
   );
 };
@@ -123,27 +122,27 @@ const MobileNav = () => {
 const NavList = () => {
   return (
     <>
-    {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-              <Link
-                as={ReactRouterLink}
-                p={2}
-                _focus={{ boxShadow: "none", }}
-                to={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={colors.primary}
-                _hover={{
-                    color:colors.secondary,
-                }}>
-                {navItem.label}
-              </Link>
+          <Link
+            as={ReactRouterLink}
+            p={2}
+            _focus={{ boxShadow: "none" }}
+            to={navItem.href ?? "#"}
+            fontSize={"sm"}
+            fontWeight={500}
+            color={colors.primary}
+            _hover={{
+              color: colors.secondary,
+            }}
+          >
+            {navItem.label}
+          </Link>
         </Center>
       ))}
-      </>
-  )
-}
-
+    </>
+  );
+};
 
 interface NavItem {
   label: string;
@@ -152,27 +151,27 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Home',
-    href: '/home',
+    label: "Home",
+    href: "/home",
   },
   {
-    label: 'About Us',
-    href: '/about'
+    label: "About Us",
+    href: "/about",
   },
   {
-    label: 'Our Team',
-    href: '/team'
+    label: "Our Team",
+    href: "/team",
   },
   {
-    label: 'Our Partners',
-    href: '/partners'
+    label: "Our Partners",
+    href: "/partners",
   },
   {
-    label: 'Apps',
-    href: '/apps'
+    label: "Apps",
+    href: "/apps",
   },
   {
-    label: 'Contact',
-    href: '/contact'
+    label: "Contact",
+    href: "/contact",
   },
 ];
