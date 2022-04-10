@@ -22,6 +22,11 @@ import { Link as ReactRouterLink } from "react-router-dom";
 export default function Navbaor() {
   const { isOpen, onToggle } = useDisclosure();
 
+  const imageMargin = useBreakpointValue({
+    base: "auto",
+    md: "none",
+  });
+
   return (
     <Box>
       <Flex
@@ -53,7 +58,13 @@ export default function Navbaor() {
           flex={{ base: 1 }}
           justify={{ base: "center", md: "start", aligh: "center" }}
         >
-          <Image minH={"60px"} maxH={"80px"} src={Logo} alt="logo" />
+          <Image
+            minH={"60px"}
+            maxH={"80px"}
+            src={Logo}
+            alt="logo"
+            margin={imageMargin}
+          />
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
