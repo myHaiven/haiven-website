@@ -3,7 +3,6 @@ import {
   Flex,
   Center,
   IconButton,
-  Text,
   Button,
   Link,
   Image,
@@ -42,7 +41,6 @@ export default function Navbaor() {
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
