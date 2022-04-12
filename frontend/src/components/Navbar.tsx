@@ -8,7 +8,6 @@ import {
   Image,
   Stack,
   Collapse,
-  useColorModeValue,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -18,7 +17,7 @@ import Logo from "../assets/logo.png";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-export default function Navbaor() {
+export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   const imageMargin = useBreakpointValue({
@@ -29,14 +28,12 @@ export default function Navbaor() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
+        borderColor={"gray.200"}
         align={"center"}
       >
         <Flex
@@ -54,7 +51,7 @@ export default function Navbaor() {
         </Flex>
         <Flex
           flex={{ base: 1 }}
-          justify={{ base: "center", md: "start", aligh: "center" }}
+          justify={{ base: "center", md: "start", align: "center" }}
         >
           <Image
             minH={"60px"}
@@ -117,12 +114,7 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
   return (
-    <Stack
-      bg={useColorModeValue("white", "gray.800")}
-      p={4}
-      display={{ md: "none" }}
-      direction={"column"}
-    >
+    <Stack p={4} display={{ md: "none" }} direction={"column"}>
       <NavList />
     </Stack>
   );
