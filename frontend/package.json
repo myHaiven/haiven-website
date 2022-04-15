@@ -90,6 +90,11 @@
         }
       ],
       "@typescript-eslint/no-for-in-array": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
   },
   "prettier": {
