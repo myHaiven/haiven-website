@@ -2,15 +2,18 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     alias: {
       react: path.join(__dirname, "node_modules", "react"),
     },
+    extensions: [".jsx", ".js", "tsx"],
   },
   module: {
     rules: [
@@ -44,7 +47,22 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|jp2|webp)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "images/[name].[ext]",
+            },
+          },
+        ],
+        type: "javascript/auto",
+      },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebPackPlugin({
