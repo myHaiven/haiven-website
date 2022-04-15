@@ -24,8 +24,8 @@ jobs: # list of things to do
       - name: Code Checkout
         uses: actions/checkout@v2
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install Dependencies For Frontend
+        run: (cd ./frontend && npm ci)
 
       - name: Code Linting
         # Change directories to frontend and run ESLint
