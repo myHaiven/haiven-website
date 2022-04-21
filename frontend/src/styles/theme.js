@@ -21,12 +21,12 @@ export const customTheme = extendTheme({
           fontSize: "sm",
           fontWeight: 600,
         },
-        secondaryLink: {
-          ...theme.components.Button.variants.link,
+        secondaryLink: (props) => ({
+          ...theme.components.Button.variants.link(props),
           _focus: { boxShadow: "none" },
           fontSize: "sm",
           fontWeight: 400,
-        },
+        }),
       },
     },
     Link: {
