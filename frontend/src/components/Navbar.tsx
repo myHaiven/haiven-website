@@ -73,14 +73,7 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            _focus={{ boxShadow: "none" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
+          <Button as={"a"} variant={"secondaryLink"} href={"#"}>
             Sign In
           </Button>
           <Button variant="primary">Sign Up</Button>
