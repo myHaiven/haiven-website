@@ -3,7 +3,6 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import Example from "./components/Example.tsx";
 import Navbar from "./components/Navbar.tsx";
 
 import AboutPage from "./pages/AboutPage.tsx";
