@@ -16,7 +16,6 @@ import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
-import { palette } from "../styles/customTheme";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
