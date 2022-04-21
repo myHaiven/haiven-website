@@ -17,6 +17,7 @@ import { Link as ReactRouterLink } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
 import colors from "../styles/colors";
+import { palette } from "../styles/theme";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -88,9 +89,9 @@ export default function Navbar() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={colors.primary}
+            bg={palette.colors.primary}
             _hover={{
-              bg: colors.secondary,
+              bg: palette.colors.secondary,
             }}
           >
             Sign Up
@@ -133,9 +134,9 @@ const NavList = () => {
             to={navItem.href ?? "#"}
             fontSize={"sm"}
             fontWeight={500}
-            color={colors.primary}
+            color={palette.colors.primary}
             _hover={{
-              color: colors.secondary,
+              color: palette.colors.secondary,
             }}
           >
             {navItem.label}
