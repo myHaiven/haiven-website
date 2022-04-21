@@ -11,19 +11,12 @@ import ContactPage from "./pages/ContactPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
 import TeamPage from "./pages/TeamPage.tsx";
+import { customTheme } from "./styles/customTheme";
 
-<<<<<<< HEAD
 const app = document.getElementById("app");
 const root = createRoot(app);
 root.render(
   <ChakraProvider theme={customTheme}>
-=======
-import { customTheme } from "./styles/theme";
-
-const rootElement = document.getElementById("root");
-render(
-  <ChakraProvider theme={customTheme}>
->>>>>>> Rename custom theme to fix name clash
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar />} />
