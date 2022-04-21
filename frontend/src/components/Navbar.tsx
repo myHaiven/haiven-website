@@ -16,7 +16,6 @@ import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
-import colors from "../styles/colors";
 import { palette } from "../styles/theme";
 
 export default function Navbar() {
