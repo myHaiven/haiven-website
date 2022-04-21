@@ -1,3 +1,4 @@
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -12,10 +13,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import colors from "../styles/colors";
-import Logo from "../assets/logo.png";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ReactRouterLink } from "react-router-dom";
+
+import Logo from "../assets/logo.png";
+import colors from "../styles/colors";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
