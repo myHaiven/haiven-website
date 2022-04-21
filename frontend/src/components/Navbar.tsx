@@ -83,18 +83,7 @@ export default function Navbar() {
           >
             Sign In
           </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={palette.colors.primary}
-            _hover={{
-              bg: palette.colors.secondary,
-            }}
-          >
-            Sign Up
-          </Button>
+          <Button variant="primary">Sign Up</Button>
         </Stack>
       </Flex>
 

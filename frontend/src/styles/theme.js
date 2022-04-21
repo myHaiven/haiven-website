@@ -7,8 +7,22 @@ export const palette = extendTheme({
   },
 });
 
-export const theme = extendTheme({
+export const customTheme = extendTheme({
   components: {
+    Button: {
+      variants: {
+        primary: {
+          _hover: {
+            bg: palette.colors.secondary,
+          },
+          bg: palette.colors.primary,
+          color: "white",
+          display: { base: "none", md: "inline-flex" },
+          fontSize: "sm",
+          fontWeight: 600,
+        },
+      },
+    },
     Link: {
       variants: {
         primary: {
