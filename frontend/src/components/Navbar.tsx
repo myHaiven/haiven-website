@@ -126,18 +126,7 @@ const NavList = () => {
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link
-            as={ReactRouterLink}
-            p={2}
-            _focus={{ boxShadow: "none" }}
-            to={navItem.href ?? "#"}
-            fontSize={"sm"}
-            fontWeight={500}
-            color={palette.colors.primary}
-            _hover={{
-              color: palette.colors.secondary,
-            }}
-          >
+          <Link as={ReactRouterLink} to={navItem.href ?? "#"} variant="primary">
             {navItem.label}
           </Link>
         </Center>
