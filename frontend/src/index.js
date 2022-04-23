@@ -11,11 +11,12 @@ import ContactPage from "./pages/ContactPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
 import TeamPage from "./pages/TeamPage.tsx";
+import { customTheme } from "./styles/customTheme";
 
 const app = document.getElementById("app");
 const root = createRoot(app);
 root.render(
-  <ChakraProvider>
+  <ChakraProvider theme={customTheme}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar />} />

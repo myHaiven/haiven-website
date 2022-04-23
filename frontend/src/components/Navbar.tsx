@@ -1,3 +1,4 @@
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import {
   Box,
   Flex,
@@ -12,10 +13,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import colors from "../styles/colors";
-import Logo from "../assets/logo.png";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as ReactRouterLink } from "react-router-dom";
+
+import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -72,28 +72,10 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            _focus={{ boxShadow: "none" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
+          <Button as={"a"} variant={"secondaryLink"} href={"#"}>
             Sign In
           </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={colors.primary}
-            _hover={{
-              bg: colors.secondary,
-            }}
-          >
-            Sign Up
-          </Button>
+          <Button variant="primary">Sign Up</Button>
         </Stack>
       </Flex>
 
@@ -125,18 +107,7 @@ const NavList = () => {
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link
-            as={ReactRouterLink}
-            p={2}
-            _focus={{ boxShadow: "none" }}
-            to={navItem.href ?? "#"}
-            fontSize={"sm"}
-            fontWeight={500}
-            color={colors.primary}
-            _hover={{
-              color: colors.secondary,
-            }}
-          >
+          <Link as={ReactRouterLink} to={navItem.href ?? "#"} variant="primary">
             {navItem.label}
           </Link>
         </Center>
