@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -13,8 +13,9 @@ import HomePage from "./pages/HomePage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
 import TeamPage from "./pages/TeamPage.tsx";
 
-const rootElement = document.getElementById("root");
-render(
+const app = document.getElementById("app");
+const root = createRoot(app);
+root.render(
   <ChakraProvider>
     <BrowserRouter>
       <Routes>
@@ -27,6 +28,5 @@ render(
         <Route path="team" element={<TeamPage />} />
       </Routes>
     </BrowserRouter>
-  </ChakraProvider>,
-  rootElement
+  </ChakraProvider>
 );
