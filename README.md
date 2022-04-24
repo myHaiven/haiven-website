@@ -4,8 +4,8 @@
 
 ## Frontend
 
-- From the root folder `haiven-website`, run:
-  ```
+- To run the app locally do:
+  ```{bash}
   cd ./frontend
   npm start
   ```
