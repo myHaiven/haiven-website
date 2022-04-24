@@ -9,3 +9,7 @@
   cd ./frontend
   npm start
   ```
+- To emulate Firebase hosting locally:
+  ```{bash}
+  firebase emulators:start
+  ```
