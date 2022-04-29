@@ -89,7 +89,7 @@ const FooterNav = () => {
   return (
     <Stack direction="row" spacing="8">
       {FOOTER_ITEMS.map((footerItem) => (
-        <Stack spacing="4" minW="36" flex="1">
+        <Stack spacing="4" minW="36" flex="1" key={footerItem.label}>
           <Text fontSize="sm" fontWeight="semibold" color="subtle">
             {footerItem.label}
           </Text>
@@ -97,9 +97,10 @@ const FooterNav = () => {
             {footerItem.children.map((child) => (
               <Button
                 _focus={{ boxShadow: "none" }}
-                as={"a"}
+                as="a"
                 variant={"link"}
                 href={"#"}
+                key={child.label}
               >
                 {child.label}
               </Button>
