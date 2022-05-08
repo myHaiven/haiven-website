@@ -1,0 +1,32 @@
+# .github/workflows/lint.yml
+
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  NODE_VERSION: 14
+
+jobs: # list of things to do
+  linting:
+    name: Linting # job name (unique id)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Code Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies For Frontend
+        run: (cd ./frontend && npm ci)
+
+      - name: Code Linting
+        # Change directories to frontend and run ESLint
+        run: (cd ./frontend && npx eslint . --max-warnings=99)
