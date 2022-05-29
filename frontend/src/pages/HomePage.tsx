@@ -23,7 +23,7 @@ export default function HomePage() {
   );
 }
 
-const AboutUs = () => {
+function AboutUs() {
   return (
     <Stack minH={"50vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
