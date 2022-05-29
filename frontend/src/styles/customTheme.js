@@ -1,5 +1,12 @@
 import { extendTheme, theme } from "@chakra-ui/react";
 
+/**
+ * Can't add these into variants because it hasn't been implemented yet
+ * https://github.com/chakra-ui/chakra-ui/issues/1028
+ * https://github.com/chakra-ui/chakra-ui/pull/3258
+ */
+export const headingFontSizeBreakpoints = { base: "3xl", md: "4xl", lg: "5xl" };
+
 export const palette = extendTheme({
   colors: {
     // Generated from https://smart-swatch.netlify.app/#7DBCFF

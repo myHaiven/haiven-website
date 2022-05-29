@@ -10,9 +10,10 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
-import Card from "../components/Card";
 
-const headingFontSizeBreakpoints = { base: "3xl", md: "4xl", lg: "5xl" };
+import { headingFontSizeBreakpoints } from "../styles/customTheme";
+import Card from "../components/Card";
+import MainPanel from "../components/MainPanel";
 
 export default function HomePage() {
   return (
@@ -54,13 +55,7 @@ function AboutUs() {
 const Hero = () => {
   return (
     <Container maxW={"3xl"}>
-      <Stack
-        minH={"50vh"}
-        as={Box}
-        textAlign={"center"}
-        spacing={{ base: 8, md: 14 }}
-        py={{ base: 20, md: 36 }}
-      >
+      <MainPanel>
         <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
           Welcome
         </Heading>
@@ -87,7 +82,7 @@ const Hero = () => {
             Learn More
           </Button>
         </Stack>
-      </Stack>
+      </MainPanel>
     </Container>
   );
 };
