@@ -8,7 +8,6 @@ import {
   Flex,
   Image,
   SimpleGrid,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { palette } from "../styles/customTheme.js";
