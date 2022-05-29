@@ -32,7 +32,7 @@ function AboutUs() {
           <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
             About Us
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text variant="grey">
             {`The project board is an exclusive resource for contract work. It's
             perfect for freelancers, agencies, and moonlighters.`}
           </Text>
@@ -58,7 +58,7 @@ const Hero = () => {
         <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
           Welcome
         </Heading>
-        <Text color={"gray.500"}>
+        <Text variant="grey">
           Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
           qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
           sed quia non numquam eius modi tempora.

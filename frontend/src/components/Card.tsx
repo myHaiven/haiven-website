@@ -28,9 +28,7 @@ export default function Card(props: CardDetails) {
         </Heading>
         <InfoIcon boxSize={{ base: "0.5em", md: "1em", lg: "1em" }} />
       </Stack>
-      <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
-        {props.cardDetail}
-      </Text>
+      <Text variant="grey">{props.cardDetail}</Text>
       <Button
         color={palette.colors.primary["400"]}
         _hover={{
