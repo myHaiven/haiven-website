@@ -1,5 +1,5 @@
-import { InfoIcon, CloseIcon } from "@chakra-ui/icons";
-import { Stack, Heading, Text, Button, Center } from "@chakra-ui/react";
+import { InfoIcon } from "@chakra-ui/icons";
+import { Stack, Heading, Text, Button } from "@chakra-ui/react";
 import React from "react";
 
 import { palette } from "../styles/customTheme";
