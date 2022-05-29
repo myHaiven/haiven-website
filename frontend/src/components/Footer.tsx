@@ -9,7 +9,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import * as React from "react";
-import colors from "../styles/colors";
+import { palette } from "../styles/customTheme.js";
 import Logo from "../assets/logo.png";
 
 export default function Navbar() {
@@ -40,7 +40,11 @@ export default function Navbar() {
               alt="logo"
               margin={imageMargin}
             />
-            <Text fontSize="20px" color={colors.primary} alignSelf={"center"}>
+            <Text
+              fontSize="20px"
+              color={palette.colors.primary}
+              alignSelf={"center"}
+            >
               Haiven
             </Text>
           </Stack>

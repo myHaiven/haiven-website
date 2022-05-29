@@ -12,7 +12,7 @@ module.exports = {
     alias: {
       react: path.join(__dirname, "node_modules", "react"),
     },
-    extensions: [".jsx", ".js", "tsx"],
+    extensions: [".jsx", ".js", ".tsx"],
   },
   module: {
     rules: [
