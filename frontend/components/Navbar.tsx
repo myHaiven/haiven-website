@@ -85,21 +85,21 @@ export default function Navbar() {
   );
 }
 
-const DesktopNav = () => {
+function DesktopNav() {
   return (
     <Stack direction={"row"} spacing={4}>
       <NavList />
     </Stack>
   );
-};
+}
 
-const MobileNav = () => {
+function MobileNav() {
   return (
     <Stack p={4} display={{ md: "none" }} direction={"column"}>
       <NavList />
     </Stack>
   );
-};
+}
 
 const NavbarLinkStyle = {
   _focus: { boxShadow: "none" },
@@ -113,7 +113,7 @@ const NavbarLinkStyle = {
   p: "2",
 };
 
-const NavList = () => {
+function NavList() {
   return (
     <>
       {NAV_ITEMS.map((navItem) => (
@@ -125,7 +125,7 @@ const NavList = () => {
       ))}
     </>
   );
-};
+}
 
 interface NavItem {
   label: string;
