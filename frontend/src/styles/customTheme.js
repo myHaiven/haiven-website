@@ -24,9 +24,9 @@ export const customTheme = extendTheme({
       variants: {
         primary: {
           _hover: {
-            bg: palette.colors.secondary,
+            bg: palette.colors.primary["100"],
           },
-          bg: palette.colors.primary,
+          bg: palette.colors.primary["200"],
           color: "white",
           display: { base: "none", md: "inline-flex" },
           fontSize: "sm",
@@ -45,10 +45,10 @@ export const customTheme = extendTheme({
         primary: {
           _focus: { boxShadow: "none" },
           _hover: {
-            color: palette.colors.secondary,
+            color: palette.colors.primary["100"],
             "text-decoration": "none",
           },
-          color: palette.colors.primary,
+          color: palette.colors.primary["200"],
           fontSize: "sm",
           fontWeight: "500",
           p: "2",
