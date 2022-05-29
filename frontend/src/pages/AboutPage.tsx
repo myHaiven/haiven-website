@@ -11,7 +11,7 @@ export default function AboutPage() {
         <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
           About Us
         </Heading>
-        <Text textStyle="greyText">
+        <Text variant="grey">
           Haiven is a non-profit organization that is devoted to helping victims
           impacted by intimate partner violence. During our customer outreach,
           victims expressed a need for more accessible and tailored solutions,
