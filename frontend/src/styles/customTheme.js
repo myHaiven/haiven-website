@@ -7,6 +7,11 @@ import { extendTheme, theme } from "@chakra-ui/react";
  */
 export const headingFontSizeBreakpoints = { base: "3xl", md: "4xl", lg: "5xl" };
 
+const greyOrGrayVariant = {
+  color: "gray.500",
+  fontSize: { base: "md", lg: "lg" },
+};
+
 export const palette = extendTheme({
   colors: {
     // Generated from https://smart-swatch.netlify.app/#7DBCFF
@@ -67,6 +72,12 @@ export const customTheme = extendTheme({
           fontWeight: "500",
           p: "2",
         },
+      },
+    },
+    Text: {
+      variants: {
+        gray: greyOrGrayVariant,
+        grey: greyOrGrayVariant,
       },
     },
   },
