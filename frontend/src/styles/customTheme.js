@@ -2,8 +2,19 @@ import { extendTheme, theme } from "@chakra-ui/react";
 
 export const palette = extendTheme({
   colors: {
-    primary: "#7DBCFF",
-    secondary: "#C2E0FF",
+    // Generated from https://smart-swatch.netlify.app/#7DBCFF
+    primary: {
+      50: "#def3ff",
+      100: "#b0d8ff",
+      200: "#80bdff",
+      300: "#50a3fe",
+      400: "#2589fc",
+      500: "#126fe4",
+      600: "#0757b2",
+      700: "#003e80",
+      800: "#00254f",
+      900: "#000c1f",
+    },
   },
 });
 
