@@ -40,6 +40,13 @@ export const customTheme = extendTheme({
         }),
       },
     },
+    Heading: {
+      variants: {
+        primaryColor: {
+          color: palette.colors.primary["400"],
+        },
+      },
+    },
     Link: {
       variants: {
         primary: {
