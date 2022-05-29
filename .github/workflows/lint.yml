@@ -29,4 +29,4 @@ jobs: # list of things to do
 
       - name: Code Linting
         # Change directories to frontend and run ESLint
-        run: (cd ./frontend && npx eslint . --max-warnings=99)
+        run: (cd ./frontend && npx eslint . --max-warnings=0)
