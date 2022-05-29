@@ -88,7 +88,7 @@ export default function Navbar() {
   );
 }
 
-const FooterNav = () => {
+function FooterNav() {
   return (
     <Stack direction="row" spacing="8">
       {FOOTER_ITEMS.map((footerItem) => (
@@ -113,7 +113,7 @@ const FooterNav = () => {
       ))}
     </Stack>
   );
-};
+}
 
 interface FooterItem {
   label: string;
