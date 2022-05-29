@@ -51,7 +51,7 @@ function AboutUs() {
   );
 }
 
-const Hero = () => {
+function Hero() {
   return (
     <Container maxW={"3xl"}>
       <MainPanel>
@@ -84,9 +84,9 @@ const Hero = () => {
       </MainPanel>
     </Container>
   );
-};
+}
 
-const Values = () => {
+function Values() {
   return (
     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} padding={10}>
       <Card
@@ -106,4 +106,4 @@ const Values = () => {
       />
     </SimpleGrid>
   );
-};
+}
