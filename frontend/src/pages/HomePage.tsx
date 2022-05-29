@@ -29,9 +29,9 @@ function AboutUs() {
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
           <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            <Text color={"blue.400"} as={"span"}>
+            <Text color={palette.colors.primary["200"]} as={"span"}>
               About Us
-            </Text>{" "}
+            </Text>
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
             {`The project board is an exclusive resource for contract work. It's
@@ -50,7 +50,7 @@ function AboutUs() {
       </Flex>
     </Stack>
   );
-};
+}
 
 const Hero = () => {
   return (
@@ -65,7 +65,7 @@ const Hero = () => {
         <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
           <Text color={"blue.400"} as={"span"}>
             Welcome
-          </Text>{" "}
+          </Text>
         </Heading>
         <Text color={"gray.500"}>
           Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
