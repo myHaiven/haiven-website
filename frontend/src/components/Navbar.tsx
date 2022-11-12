@@ -5,7 +5,6 @@ import {
   Center,
   IconButton,
   Button,
-  Link,
   Image,
   Stack,
   Collapse,
@@ -13,9 +12,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
+import Link from "./ChakraNextLink";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -107,7 +106,7 @@ const NavList = () => {
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link as={ReactRouterLink} to={navItem.href ?? "#"} variant="primary">
+          <Link href={navItem.href ?? "#"} variant="primary">
             {navItem.label}
           </Link>
         </Center>
