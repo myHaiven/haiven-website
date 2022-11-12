@@ -7,7 +7,7 @@
 - To run the app locally do:
   ```{bash}
   cd ./frontend
-  npm start
+  npm run dev
   ```
 - To emulate Firebase hosting locally:
   ```{bash}
