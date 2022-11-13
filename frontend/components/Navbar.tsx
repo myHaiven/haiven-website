@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-import Logo from "../assets/logo.png";
 import Link from "./ChakraNextLink";
 
 export default function Navbar() {
@@ -55,8 +54,8 @@ export default function Navbar() {
           <Image
             minH={"60px"}
             maxH={"80px"}
-            src={Logo}
-            alt="logo"
+            src="/logo.png"
+            alt="Haiven Logo"
             margin={imageMargin}
           />
 
