@@ -4,7 +4,7 @@ import React from "react";
 import MainPanel from "../components/MainPanel";
 import { headingFontSizeBreakpoints } from "../styles/customTheme";
 
-export default function TeamPage() {
+export default function Team() {
   return (
     <MainPanel>
       <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">

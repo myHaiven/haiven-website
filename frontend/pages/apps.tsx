@@ -4,7 +4,7 @@ import React from "react";
 import MainPanel from "../components/MainPanel";
 import { headingFontSizeBreakpoints } from "../styles/customTheme";
 
-export default function AppsPage() {
+export default function Apps() {
   return (
     <MainPanel>
       <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">

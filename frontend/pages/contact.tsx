@@ -4,7 +4,7 @@ import React from "react";
 import MainPanel from "../components/MainPanel";
 import { headingFontSizeBreakpoints } from "../styles/customTheme";
 
-export default function ContactPage() {
+export default function Contact() {
   return (
     <MainPanel>
       <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
