@@ -60,8 +60,7 @@
       "@typescript-eslint"
     ],
     "ignorePatterns": [
-      "node_modules/",
-      "webpack.config.js"
+      "node_modules/"
     ],
     "rules": {
       "no-console": "warn",
