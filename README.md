@@ -11,6 +11,6 @@
   ```
 - To emulate Firebase hosting locally:
   ```{bash}
-  npm run emulate-firebase
+  npm run emulateFirebase
   ```
   This builds the website at `build` which is what Firebase hosts.
