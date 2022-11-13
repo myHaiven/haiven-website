@@ -14,6 +14,7 @@ import {
 import React from "react";
 
 import Link from "./ChakraNextLink";
+import { palette } from "../styles/customTheme";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -100,12 +101,24 @@ const MobileNav = () => {
   );
 };
 
+const NavbarLinkStyle = {
+  _focus: { boxShadow: "none" },
+  _hover: {
+    color: palette.colors.secondary,
+    "text-decoration": "none",
+  },
+  color: palette.colors.primary,
+  fontSize: "sm",
+  fontWeight: "500",
+  p: "2",
+};
+
 const NavList = () => {
   return (
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link href={navItem.href ?? "#"} variant="primary">
+          <Link href={navItem.href ?? "#"} {...NavbarLinkStyle}>
             {navItem.label}
           </Link>
         </Center>
