@@ -1,13 +1,15 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: "/about",
-        destination: "/",
-      },
-    ];
-  },
+  rewrites: rewrites,
   swcMinify: true,
 };
+
+async function rewrites() {
+  return [
+    {
+      source: "/about",
+      destination: "/",
+    },
+  ];
+}
