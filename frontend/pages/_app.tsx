@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import React from "react";
 
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { customTheme } from "../styles/customTheme";
 
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={customTheme}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   );
 }
