@@ -42,7 +42,7 @@ export default function Navbar() {
             />
             <Text
               fontSize="20px"
-              color={palette.colors.primary["200"]}
+              color={palette.colors.primary}
               alignSelf={"center"}
             >
               Haiven
