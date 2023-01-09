@@ -2,8 +2,19 @@ import { extendTheme, theme } from "@chakra-ui/react";
 
 export const palette = extendTheme({
   colors: {
-    primary: "#7DBCFF",
-    secondary: "#C2E0FF",
+    // Generated from https://smart-swatch.netlify.app/#7DBCFF
+    primary: {
+      50: "#def3ff",
+      100: "#b0d8ff",
+      200: "#80bdff",
+      300: "#50a3fe",
+      400: "#2589fc",
+      500: "#126fe4",
+      600: "#0757b2",
+      700: "#003e80",
+      800: "#00254f",
+      900: "#000c1f",
+    },
   },
 });
 
@@ -13,9 +24,9 @@ export const customTheme = extendTheme({
       variants: {
         primary: {
           _hover: {
-            bg: palette.colors.secondary,
+            bg: palette.colors.primary["100"],
           },
-          bg: palette.colors.primary,
+          bg: palette.colors.primary["200"],
           color: "white",
           display: { base: "none", md: "inline-flex" },
           fontSize: "sm",
@@ -29,15 +40,22 @@ export const customTheme = extendTheme({
         }),
       },
     },
+    Heading: {
+      variants: {
+        primaryColor: {
+          color: palette.colors.primary["400"],
+        },
+      },
+    },
     Link: {
       variants: {
         primary: {
           _focus: { boxShadow: "none" },
           _hover: {
-            color: palette.colors.secondary,
+            color: palette.colors.primary["100"],
             "text-decoration": "none",
           },
-          color: palette.colors.primary,
+          color: palette.colors.primary["200"],
           fontSize: "sm",
           fontWeight: "500",
           p: "2",

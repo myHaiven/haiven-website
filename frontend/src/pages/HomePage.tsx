@@ -8,11 +8,11 @@ import {
   Flex,
   Image,
   SimpleGrid,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
-import { palette } from "../styles/customTheme.js";
 import Card from "../components/Card";
+
+const headingFontSizeBreakpoints = { base: "3xl", md: "4xl", lg: "5xl" };
 
 export default function HomePage() {
   return (
@@ -24,15 +24,13 @@ export default function HomePage() {
   );
 }
 
-const AboutUs = () => {
+function AboutUs() {
   return (
     <Stack minH={"50vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            <Text color={"blue.400"} as={"span"}>
-              About Us
-            </Text>{" "}
+          <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
+            About Us
           </Heading>
           <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
             {`The project board is an exclusive resource for contract work. It's
@@ -51,7 +49,7 @@ const AboutUs = () => {
       </Flex>
     </Stack>
   );
-};
+}
 
 const Hero = () => {
   return (
@@ -63,10 +61,8 @@ const Hero = () => {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
-        <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-          <Text color={"blue.400"} as={"span"}>
-            Welcome
-          </Text>{" "}
+        <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
+          Welcome
         </Heading>
         <Text color={"gray.500"}>
           Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
