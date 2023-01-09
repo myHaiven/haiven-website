@@ -2,8 +2,6 @@ import { InfoIcon, CloseIcon } from "@chakra-ui/icons";
 import { Stack, Heading, Text, Button, Center } from "@chakra-ui/react";
 import React from "react";
 
-import { palette } from "../styles/customTheme";
-
 interface CardDetails {
   cardTitle: string;
   cardDetail: string;
@@ -22,17 +20,19 @@ export default function Card(props: CardDetails) {
     >
       <Stack direction={"row"} alignItems={"center"} margin={"auto"}>
         <Heading fontSize={{ base: "1xl", md: "2xl", lg: "2xl" }}>
-          <Text color={palette.colors.primary["400"]} as={"span"}>
+          <Text color={"blue.400"} as={"span"}>
             {props.cardTitle}
           </Text>
         </Heading>
         <InfoIcon boxSize={{ base: "0.5em", md: "1em", lg: "1em" }} />
       </Stack>
-      <Text variant="grey">{props.cardDetail}</Text>
+      <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+        {props.cardDetail}
+      </Text>
       <Button
-        color={palette.colors.primary["400"]}
+        color={"blue.400"}
         _hover={{
-          bg: palette.colors.primary["500"],
+          bg: "blue.500",
         }}
       >
         {props.cardButton}
