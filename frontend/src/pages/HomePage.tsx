@@ -1,5 +1,4 @@
 import {
-  Box,
   Heading,
   Container,
   Text,
@@ -8,11 +7,12 @@ import {
   Flex,
   Image,
   SimpleGrid,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";
-import { palette } from "../styles/customTheme.js";
+
+import { headingFontSizeBreakpoints } from "../styles/customTheme";
 import Card from "../components/Card";
+import MainPanel from "../components/MainPanel";
 
 export default function HomePage() {
   return (
@@ -24,17 +24,15 @@ export default function HomePage() {
   );
 }
 
-const AboutUs = () => {
+function AboutUs() {
   return (
     <Stack minH={"50vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
         <Stack spacing={6} w={"full"} maxW={"lg"}>
-          <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-            <Text color={"blue.400"} as={"span"}>
-              About Us
-            </Text>{" "}
+          <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
+            About Us
           </Heading>
-          <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>
+          <Text variant="grey">
             {`The project board is an exclusive resource for contract work. It's
             perfect for freelancers, agencies, and moonlighters.`}
           </Text>
@@ -51,24 +49,16 @@ const AboutUs = () => {
       </Flex>
     </Stack>
   );
-};
+}
 
 const Hero = () => {
   return (
     <Container maxW={"3xl"}>
-      <Stack
-        minH={"50vh"}
-        as={Box}
-        textAlign={"center"}
-        spacing={{ base: 8, md: 14 }}
-        py={{ base: 20, md: 36 }}
-      >
-        <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-          <Text color={"blue.400"} as={"span"}>
-            Welcome
-          </Text>{" "}
+      <MainPanel>
+        <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
+          Welcome
         </Heading>
-        <Text color={"gray.500"}>
+        <Text variant="grey">
           Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
           qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
           sed quia non numquam eius modi tempora.
@@ -91,7 +81,7 @@ const Hero = () => {
             Learn More
           </Button>
         </Stack>
-      </Stack>
+      </MainPanel>
     </Container>
   );
 };
