@@ -13,4 +13,4 @@
   ```{bash}
   npm run emulateFirebase
   ```
-  This builds the website at `build` which is what Firebase hosts.
+  This builds the website at `out` which is what Firebase hosts.
