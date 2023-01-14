@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
 
-export default function Home() {
+export function Home() {
   return (
     <Box>
       <Heading>Haiven</Heading>
