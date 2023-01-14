@@ -71,7 +71,7 @@ function NavList() {
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link href={navItem.href ?? "#"} {...NavbarLinkStyle}>
+          <Link href={navItem.href ?? "#"} style={NavbarLinkStyle}>
             {navItem.label}
           </Link>
         </Center>
