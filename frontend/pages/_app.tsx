@@ -9,7 +9,7 @@ import MainPage from "./MainPage";
 export default function App() {
   return (
     <ChakraProvider theme={customTheme}>
-      <Flex id="asdf" direction="column" maxHeight="100%">
+      <Flex direction="column" maxHeight="100%">
         <Navbar />
         {/* The scroll here let's the navbar stay at the top without content scrolling underneath, it is also responsive to navbar width changes */}
         <MainPage overflowY="scroll" />
