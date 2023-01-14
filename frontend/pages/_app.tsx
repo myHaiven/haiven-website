@@ -4,7 +4,7 @@ import { ChakraProvider, Flex } from "@chakra-ui/react";
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import { customTheme } from "../styles/customTheme";
-import MainPage from "./MainPage";
+import MainPage from "./index";
 
 export default function App() {
   return (
