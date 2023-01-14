@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Text } from "@chakra-ui/react";
 
 export function Stats() {
   return (
-    <Box>
+    <HStack>
       <Box>
         <Heading>In 2018...</Heading>
         <Text>There were 68 000 transition home admissions in Canada</Text>
@@ -22,6 +22,6 @@ export function Stats() {
         </Text>
         <Text>Data collected from Statistics Canada</Text>
       </Box>
-    </Box>
+    </HStack>
   );
 }
