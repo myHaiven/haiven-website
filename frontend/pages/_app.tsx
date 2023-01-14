@@ -2,7 +2,7 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import Navbar from "../components/Navbar";
-import { Home, Stats, Vision } from "../sections";
+import { Focus, Home, Stats, Vision } from "../sections";
 import { customTheme } from "../styles/customTheme";
 
 export default function App() {
@@ -12,6 +12,7 @@ export default function App() {
       <Home />
       <Stats />
       <Vision />
+      <Focus />
     </ChakraProvider>
   );
 }
