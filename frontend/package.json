@@ -72,6 +72,7 @@
           "namedComponents": "function-declaration"
         }
       ],
+      "spaced-comment": "warn",
       "@typescript-eslint/no-for-in-array": "warn"
     },
     "settings": {
