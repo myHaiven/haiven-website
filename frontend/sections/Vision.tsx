@@ -1,9 +1,16 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
 
-export function Vision() {
+import { Id } from "../pages/MainPage";
+
+type Props = {
+  id: Id;
+};
+
+export function Vision(props: Props) {
+  const { id } = props;
   return (
-    <Box>
+    <Box id={id}>
       <Heading>Vision</Heading>
       <Text>
         Our vision is to create accessible technology and services that aid
