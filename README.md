@@ -4,9 +4,8 @@
 
 ## Frontend
 
-- To run the app locally do:
+- To run the app locally with hot reload and do:
   ```{bash}
-  cd ./frontend
   npm run dev
   ```
 - To emulate Firebase hosting locally:
