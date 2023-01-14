@@ -4,7 +4,7 @@ import React from "react";
 import MainPanel from "../components/MainPanel";
 import { headingFontSizeBreakpoints } from "../styles/customTheme";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <Container maxW={"3xl"}>
       <MainPanel>

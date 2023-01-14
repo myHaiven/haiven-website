@@ -14,7 +14,7 @@ import { headingFontSizeBreakpoints } from "../styles/customTheme";
 import Card from "../components/Card";
 import MainPanel from "../components/MainPanel";
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <Hero />

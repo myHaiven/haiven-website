@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import * as React from "react";
 import { palette } from "../styles/customTheme.js";
-import Logo from "../assets/logo.png";
 
 export default function Navbar() {
   const imageMargin = useBreakpointValue({
@@ -36,8 +35,8 @@ export default function Navbar() {
             <Image
               minH={"60px"}
               maxH={"80px"}
-              src={Logo}
-              alt="logo"
+              src="/logo.png"
+              alt="Haiven logo"
               margin={imageMargin}
             />
             <Text

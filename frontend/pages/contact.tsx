@@ -4,13 +4,13 @@ import React from "react";
 import MainPanel from "../components/MainPanel";
 import { headingFontSizeBreakpoints } from "../styles/customTheme";
 
-export default function TeamPage() {
+export default function Contact() {
   return (
     <MainPanel>
       <Heading fontSize={headingFontSizeBreakpoints} variant="primaryColor">
-        Team
+        Contacts
       </Heading>
-      <Text variant="grey">Team description here.</Text>
+      <Text variant="grey">Contacts description here.</Text>
     </MainPanel>
   );
 }

@@ -5,7 +5,6 @@ import {
   Center,
   IconButton,
   Button,
-  Link,
   Image,
   Stack,
   Collapse,
@@ -13,9 +12,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
 
-import Logo from "../assets/logo.png";
+import Link from "./ChakraNextLink";
+import { palette } from "../styles/customTheme";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -56,8 +55,8 @@ export default function Navbar() {
           <Image
             minH={"60px"}
             maxH={"80px"}
-            src={Logo}
-            alt="logo"
+            src="/logo.png"
+            alt="Haiven Logo"
             margin={imageMargin}
           />
 
@@ -102,12 +101,24 @@ const MobileNav = () => {
   );
 };
 
+const NavbarLinkStyle = {
+  _focus: { boxShadow: "none" },
+  _hover: {
+    color: palette.colors.secondary,
+    "text-decoration": "none",
+  },
+  color: palette.colors.primary,
+  fontSize: "sm",
+  fontWeight: "500",
+  p: "2",
+};
+
 const NavList = () => {
   return (
     <>
       {NAV_ITEMS.map((navItem) => (
         <Center key={navItem.label}>
-          <Link as={ReactRouterLink} to={navItem.href ?? "#"} variant="primary">
+          <Link href={navItem.href ?? "#"} {...NavbarLinkStyle}>
             {navItem.label}
           </Link>
         </Center>
