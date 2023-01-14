@@ -18,7 +18,7 @@ export default function Navbar() {
   });
 
   return (
-    <Box>
+    <Box backgroundColor="white" width="100%">
       <Flex
         minH={"60px"}
         py={{ base: 2 }}
