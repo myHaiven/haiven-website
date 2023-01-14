@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Text } from "@chakra-ui/react";
 
 export function Focus() {
   return (
     <Box>
       <Heading>Our Focus</Heading>
-      <Box>
+      <HStack>
         <Box>
           <Heading>Brainstorming</Heading>
           <Text>
@@ -29,7 +29,7 @@ export function Focus() {
             applications.
           </Text>
         </Box>
-      </Box>
+      </HStack>
     </Box>
   );
 }
