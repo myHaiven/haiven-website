@@ -1,5 +1,5 @@
-import { Box, Stack, StackProps } from "@chakra-ui/react";
 import React from "react";
+import { Box, Stack, StackProps } from "@chakra-ui/react";
 
 export default function MainPanel({
   as = Box,

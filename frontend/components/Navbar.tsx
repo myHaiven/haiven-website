@@ -1,20 +1,20 @@
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import React from "react";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Flex,
-  Center,
-  IconButton,
   Button,
+  Center,
+  Collapse,
+  Flex,
+  IconButton,
   Image,
   Stack,
-  Collapse,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
 
-import Link from "./ChakraNextLink";
 import { palette } from "../styles/customTheme";
+import Link from "./ChakraNextLink";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();

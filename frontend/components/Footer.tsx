@@ -1,6 +1,7 @@
+import React from "react";
 import {
-  Button,
   Box,
+  Button,
   Divider,
   Image,
   Input,
@@ -8,7 +9,7 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import * as React from "react";
+
 import { palette } from "../styles/customTheme.js";
 
 export default function Navbar() {
