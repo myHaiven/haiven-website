@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={customTheme}>
       <Navbar />
+      <HomePanel />
     </ChakraProvider>
   );
 }
