@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Heading, Text, VStack } from "@chakra-ui/react";
 
 import { Id } from "../pages/MainPage";
 
@@ -10,7 +10,7 @@ type Props = {
 export function Vision(props: Props) {
   const { id } = props;
   return (
-    <Box id={id}>
+    <VStack id={id}>
       <Heading>Vision</Heading>
       <Text>
         Our vision is to create accessible technology and services that aid
@@ -22,6 +22,6 @@ export function Vision(props: Props) {
         We understand that we are not experts in the realm of intimate partner
         violence, so we are here to support those who are.
       </Text>
-    </Box>
+    </VStack>
   );
 }
