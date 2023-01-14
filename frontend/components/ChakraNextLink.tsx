@@ -1,6 +1,6 @@
+import React from "react";
 import { chakra, LinkProps } from "@chakra-ui/react";
 import NextLink, { type LinkProps as NextLinkProps } from "next/link";
-import React from "react";
 
 // Using the approach from https://chakra-ui.com/docs/components/link#nextjs-13
 
