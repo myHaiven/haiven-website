@@ -1,21 +1,21 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 
 import { Focus, Home, Newsletter, Stats, Values, Vision } from "../sections";
 
 export type Id = "home" | "vision" | "newsletter";
 
-type Props = React.ComponentProps<typeof Box>;
+type Props = React.ComponentProps<typeof Grid>;
 
 export function MainPage(props: Props) {
   return (
-    <Box float="inline-end" maxHeight="100%" {...props}>
+    <Grid float="inline-end" gap={6} maxHeight="100%" p={10} {...props}>
       <Home id="home" />
       <Stats />
       <Vision id="vision" />
       <Focus />
       <Values />
       <Newsletter id="newsletter" />
-    </Box>
+    </Grid>
   );
 }
