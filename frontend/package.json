@@ -58,6 +58,7 @@
     },
     "plugins": [
       "react",
+      "simple-import-sort",
       "@typescript-eslint"
     ],
     "ignorePatterns": [
@@ -73,6 +74,18 @@
           "namedComponents": "function-declaration"
         }
       ],
+      "simple-import-sort/imports": [
+        "error",
+        {
+          "groups": [
+            [
+              "^react",
+              "^@?\\w"
+            ]
+          ]
+        }
+      ],
+      "simple-import-sort/exports": "error",
       "spaced-comment": "warn",
       "@typescript-eslint/no-for-in-array": "warn"
     },
