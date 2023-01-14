@@ -7,7 +7,7 @@ export type Id = "home" | "vision" | "newsletter";
 
 type Props = React.ComponentProps<typeof Grid>;
 
-export function MainPage(props: Props) {
+export default function MainPage(props: Props) {
   return (
     <Grid float="inline-end" gap={6} maxHeight="100%" p={10} {...props}>
       <Home id="home" />
