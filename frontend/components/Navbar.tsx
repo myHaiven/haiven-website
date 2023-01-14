@@ -1,24 +1,17 @@
 import React from "react";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Button,
   Center,
-  Collapse,
   Flex,
-  IconButton,
   Image,
   Stack,
   useBreakpointValue,
-  useDisclosure,
 } from "@chakra-ui/react";
 
 import { palette } from "../styles/customTheme";
 import Link from "./ChakraNextLink";
 
 export default function Navbar() {
-  const { isOpen, onToggle } = useDisclosure();
-
   const imageMargin = useBreakpointValue({
     base: "auto",
     md: "none",
@@ -36,19 +29,6 @@ export default function Navbar() {
         align={"center"}
       >
         <Flex
-          flex={{ base: 1, md: "auto" }}
-          display={{ base: "flex", md: "none" }}
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex
           flex={{ base: 1 }}
           justify={{ base: "center", md: "start", align: "center" }}
         >
@@ -59,10 +39,6 @@ export default function Navbar() {
             alt="Haiven Logo"
             margin={imageMargin}
           />
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
         </Flex>
 
         <Stack
@@ -71,33 +47,10 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          <Button as={"a"} variant={"secondaryLink"} href={"#"}>
-            Sign In
-          </Button>
-          <Button variant="primary">Sign Up</Button>
+          <NavList />
         </Stack>
       </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
     </Box>
-  );
-}
-
-function DesktopNav() {
-  return (
-    <Stack direction={"row"} spacing={4}>
-      <NavList />
-    </Stack>
-  );
-}
-
-function MobileNav() {
-  return (
-    <Stack p={4} display={{ md: "none" }} direction={"column"}>
-      <NavList />
-    </Stack>
   );
 }
 
@@ -140,18 +93,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About Us",
     href: "/about",
-  },
-  {
-    label: "Our Team",
-    href: "/team",
-  },
-  {
-    label: "Our Partners",
-    href: "/partners",
-  },
-  {
-    label: "Apps",
-    href: "/apps",
   },
   {
     label: "Contact",
