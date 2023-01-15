@@ -76,6 +76,13 @@
           "namedComponents": "function-declaration"
         }
       ],
+      "react/jsx-curly-brace-presence": [
+        "warn",
+        {
+          "props": "never",
+          "propElementValues": "always"
+        }
+      ],
       "simple-import-sort/imports": [
         "error",
         {
