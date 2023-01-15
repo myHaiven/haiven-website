@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  Flex,
-  Image,
-  Stack,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Image, useBreakpointValue } from "@chakra-ui/react";
 
 import { palette } from "../styles/customTheme";
 import Link from "./ChakraNextLink";
