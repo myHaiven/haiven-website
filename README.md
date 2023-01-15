@@ -1,5 +1,7 @@
 # Haiven website
 
+[Live website on firebase](https://haiven-hub.web.app/)
+
 # Instructions
 
 ## Frontend
