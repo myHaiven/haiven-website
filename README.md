@@ -8,6 +8,12 @@
   ```{bash}
   npm run dev
   ```
+- To lint the code, do:
+  ```{bash}
+  npm run lint
+  ```
+  - Note that this command only checks the `pages`, `components`, and `lib`
+    directories.
 - To emulate Firebase hosting locally:
   ```{bash}
   npm run emulateFirebase
