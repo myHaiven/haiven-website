@@ -13,21 +13,21 @@ export default function Navbar() {
   return (
     <Box backgroundColor="white" width="100%">
       <Flex
-        minH={"60px"}
+        minH="60px"
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={"gray.200"}
-        align={"center"}
+        borderStyle="solid"
+        borderColor="gray.200"
+        align="center"
       >
         <Flex
           flex={{ base: 1 }}
           justify={{ base: "center", md: "start", align: "center" }}
         >
           <Image
-            minH={"60px"}
-            maxH={"80px"}
+            minH="60px"
+            maxH="80px"
             src="/logo.png"
             alt="Haiven Logo"
             margin={imageMargin}
