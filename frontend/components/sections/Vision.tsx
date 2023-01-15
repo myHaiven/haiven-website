@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 
-import { Id } from "../pages";
+import { Id } from "../../pages";
 
 type Props = {
   id: Id;

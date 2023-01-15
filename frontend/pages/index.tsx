@@ -1,7 +1,14 @@
 import React from "react";
 import { Grid } from "@chakra-ui/react";
 
-import { Focus, Home, Newsletter, Stats, Values, Vision } from "../sections";
+import {
+  Focus,
+  Home,
+  Newsletter,
+  Stats,
+  Values,
+  Vision,
+} from "../components/sections";
 
 export type Id = "home" | "vision" | "newsletter";
 
