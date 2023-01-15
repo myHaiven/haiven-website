@@ -1,17 +1,19 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import type { AppProps } from "next/app";
 import React from "react";
+import { ChakraProvider, Flex } from "@chakra-ui/react";
 
-import Footer from "../components/Footer";
+import "../styles/global.css";
 import Navbar from "../components/Navbar";
 import { customTheme } from "../styles/customTheme";
+import MainPage from "./index";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App() {
   return (
     <ChakraProvider theme={customTheme}>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
+      <Flex direction="column" maxHeight="100%">
+        <Navbar />
+        {/* The scroll here let's the navbar stay at the top without content scrolling underneath, it is also responsive to navbar width changes */}
+        <MainPage overflowY="scroll" />
+      </Flex>
     </ChakraProvider>
   );
 }

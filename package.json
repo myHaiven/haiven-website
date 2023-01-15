@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run installPackages && cd ./frontend && npm run build",
+    "dev": "cd ./frontend && npm run dev",
     "emulateFirebase": "npm run build && firebase emulators:start",
     "installPackages": "npm ci && cd ./frontend && npm ci",
+    "lint": "cd ./frontend && npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
