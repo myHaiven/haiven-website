@@ -23,15 +23,9 @@ export default function Navbar() {
       >
         <Flex
           flex={{ base: 1 }}
-          justify={{ base: "center", md: "start", align: "center" }}
+          justify={{ base: "center", md: "start", align: "left" }}
         >
-          <Image
-            minH="60px"
-            maxH="80px"
-            src="/logo.png"
-            alt="Haiven Logo"
-            margin={imageMargin}
-          />
+          <Image minH="60px" maxH="80px" src="/logo.png" alt="Haiven Logo" />
         </Flex>
 
         <Flex flexDirection="row" gap={6} justify="flex-end" direction="row">
