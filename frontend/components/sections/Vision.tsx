@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Text, VStack } from "@chakra-ui/react";
+import { Heading, Text, VStack, Image } from "@chakra-ui/react";
 
 import { Id } from "../../pages";
 
@@ -22,6 +22,7 @@ export function Vision(props: Props) {
         We understand that we are not experts in the realm of intimate partner
         violence, so we are here to support those who are.
       </Text>
+      <Image src="/Haiven-Vision.svg" />
     </VStack>
   );
 }
