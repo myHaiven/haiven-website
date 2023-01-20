@@ -4,7 +4,7 @@ import { Box, Heading, Grid, GridItem, Text } from "@chakra-ui/react";
 export function Focus() {
   return (
     <Box>
-      <Heading>Our Focus</Heading>
+      <Heading paddingY="20px">Our Focus</Heading>
       <Grid templateColumns="repeat(3, 1fr)" gap={10}>
         <GridItem boxShadow="2xl" p="15" rounded="60px" bg="white">
           <Heading as="h3" size="md" margin="10px">

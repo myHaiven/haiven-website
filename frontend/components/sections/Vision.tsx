@@ -22,7 +22,7 @@ export function Vision(props: Props) {
         We understand that we are not experts in the realm of intimate partner
         violence, so we are here to support those who are.
       </Text>
-      <Image src="/Haiven-Vision.svg" />
+      <Image boxSize="65%" src="/Haiven-Vision.svg" />
     </VStack>
   );
 }

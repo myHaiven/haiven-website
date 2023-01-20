@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Heading, Text, VStack, Image, HStack } from "@chakra-ui/react";
+import { Button, Heading, Text, GridItem, Image, Grid } from "@chakra-ui/react";
 
 import { Id } from "../../pages";
 
@@ -10,16 +10,18 @@ type Props = {
 export function Home(props: Props) {
   const { id } = props;
   return (
-    <HStack justifyContent="center">
-      <VStack id={id}>
+    <Grid templateColumns="repeat(2, 1fr)">
+      <GridItem id={id}>
         <Heading>Haiven</Heading>
-        <Text>
+        <Text fontSize="2xl">
           Creating accessible technology and services to help victims find
           support.
         </Text>
         <Button>Join our newsletter (WIP)</Button>
-      </VStack>
-      <Image src="/Haiven-Collaborating.svg" />
-    </HStack>
+      </GridItem>
+      <GridItem>
+        <Image src="/Haiven-Collaborating.svg" />
+      </GridItem>
+    </Grid>
   );
 }
